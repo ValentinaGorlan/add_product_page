@@ -1,0 +1,210 @@
+@import "./styleReset.css";
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #e5e5e5;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(63, 63, 63, 1);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 32px 16px 32px 32px;
+}
+
+/* Form  */
+
+.under {
+  min-width: 348px;
+  height: 100px;
+  opacity: 0;
+}
+
+.form__container .add__form,
+.products__container ul li {
+  background-color: #fffffb;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
+    0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+.form__container {
+  box-sizing: border-box;
+  width: 332px;
+  margin-right: 16px;
+  position: fixed;
+  top: 32px;
+  left: 32px;
+}
+
+.form__container h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.add__form {
+  padding: 8px 24px 24px 24px;
+}
+
+.add__form p {
+  display: inline-block;
+  font-size: 10px;
+  color: #49485e;
+  margin: 16px 0 4px;
+  position: relative;
+}
+
+.form__title::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ff8484;
+  position: absolute;
+  top: 0;
+  right: -8px;
+}
+
+.add__form input,
+.add__form .description__input {
+  background-color: #fffffb;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-size: 12px;
+  color: #b4b4b4;
+}
+
+.description__input {
+  height: 108px;
+  resize: none;
+}
+
+.btn__add {
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 0;
+  color: #b4b4b4;
+  margin-top: 24px;
+}
+
+.btn__active {
+  color: #ffffff;
+  background-color: #7bae73;
+}
+
+/* .products__container */
+
+.products__container {
+  box-sizing: border-box;
+  width: 74.7%;
+  position: relative;
+}
+
+.btn__default {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  background-color: #fffefb;
+  color: #b4b4b4;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px 27.5px 10px 16px;
+  cursor: pointer;
+}
+
+.btn__default p {
+  position: relative;
+}
+
+.btn__default p::after {
+  content: "";
+  display: block;
+  width: 4.59px;
+  height: 4.59px;
+  border-bottom: 1px solid #b4b4b4;
+  border-left: 1px solid #b4b4b4;
+  position: absolute;
+  top: 4px;
+  right: -10px;
+  transform: rotate(-45deg);
+}
+
+.products__container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 44px 0;
+  padding: 0;
+}
+
+.products__container ul li {
+  list-style: none;
+  width: 30.8%;
+  min-width: 332px;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding: 0;
+  position: relative;
+}
+
+.products__container ul li:hover::after {
+    content: url(./img/Vector.png);
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 32px;
+    height: 32px;
+    background-color: #FF8484;
+    border-radius: 10px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.products__container ul li img {
+  width: 100%;
+}
+
+.products__container ul li h4 {
+  margin: 16px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.products__container ul li p {
+  line-height: 20px;
+  margin: 0 16px;
+}
+
+.products__container ul li h3 {
+  font-size: 24px;
+  margin: 32px 0 24px 16px;
+}
+
+.products__container ul:last-child::before {
+  content: "";
+  width: 332px;
+  order: 99999;
+}
+
+.products__container ul:last-child::after {
+  content: "";
+  width: 332px;
+}
