@@ -24,7 +24,7 @@ a {
 
 .under {
   min-width: 348px;
-  height: 100px;
+  height: 490px;
   opacity: 0;
 }
 
@@ -207,4 +207,31 @@ a {
 .products__container ul:last-child::after {
   content: "";
   width: 332px;
+}
+
+@media screen and (max-width: 376px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .form__container {
+    position: absolute;
+    top: 32px;
+    left: 0;
+  }
+
+  .products__container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products__container ul li {
+    width: 100%;
+  }
+
+
 }
